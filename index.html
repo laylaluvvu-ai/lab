@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Lab Simulator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .lab-item { display: inline-block; margin: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        #dish { width: 100px; height: 100px; background: #f0e68c; border-radius: 50%; position: relative; }
+        #paper { width: 70px; height: 50px; background: #ffffff; position: absolute; top: 25%; left: 15%; }
+        #tools { background: #99ccff; padding: 10px; }
+        #lighter { background: #ffcc99; padding: 10px; cursor: pointer; }
+        #result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Virtual Lab Simulator</h1>
+    <div id="dish" class="lab-item">
+        <div id="paper" class="lab-item">Paper</div>
+    </div>
+    <div id="tools" class="lab-item">
+        <h2>Tools</h2>
+        <div id="lighter" class="lab-item" onclick="burnPaper()">Lighter</div>
+    </div>
+    <div id="result"></div>
+    <script>
+        function burnPaper() {
+            document.getElementById('paper').style.display = 'none'; // Hide the paper
+            document.getElementById('result').innerHTML = '<h2>The paper has burned to ash!</h2>';
+        }
+    </script>
+</body>
+</html>
