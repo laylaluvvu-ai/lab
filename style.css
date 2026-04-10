@@ -1,0 +1,27 @@
+.burning-paper {
+    animation: burn 3s forwards;
+}
+
+@keyframes burn {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.ash-effect {
+    animation: fall 2s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
